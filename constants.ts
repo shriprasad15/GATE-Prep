@@ -93,21 +93,21 @@ export const MASTER_SCHEDULE: DaySchedule[] = [
     session1: { title: "GATE MA PYQs (Prob)", desc: "Solve Conditional Prob & Bayes Theorem questions." },
     session2: { title: "Concept Fix: RVs", desc: "Review Discrete/Continuous RVs. Check IITM Stats 2 slides." },
     session3: { title: "IITM Graded Assignments", desc: "Solve Week 1-4 Graded Assignments." },
-    resource: { name: "IITM Stats", link: "https://drive.google.com/drive/folders/15I3rfd3kpBztpr3BzfDmZsskW0eDrmVV" }
+    resource: { name: "IITM Stats Drive", link: "https://drive.google.com/drive/folders/15I3rfd3kpBztpr3BzfDmZsskW0eDrmVV" }
   },
   { 
     date: "Jan 06", day: "Mon", phase: "Topic Mastery", topic: "Linear Algebra", 
     session1: { title: "GATE CS PYQs (LA)", desc: "Matrices, Rank, Eigenvalues. Quick fire solving." },
     session2: { title: "Deep Dive: SVD & PCA", desc: "Study SVD math specifically for DA. Use Gilbert Strang." },
-    session3: { title: "GO Topic Test: LA", desc: "Take the specific Linear Algebra topic test." },
-    resource: { name: "Gilbert Strang", link: "https://web.mit.edu/18.06/www/videos.shtml" }
+    session3: { title: "GO Topic Test: LA", desc: "Take Linear Algebra Topic Test." },
+    resource: { name: "GO Test Series", link: "https://www.goclasses.in/s/pages/gate-da-test-series#1699851492489d" }
   },
   { 
     date: "Jan 07", day: "Tue", phase: "Topic Mastery", topic: "ML (Supervised)", 
     session1: { title: "IITM MLP Assignments", desc: "Solve Regression, Logistic Reg, DT questions." },
     session2: { title: "Concept Fix: Bias-Variance", desc: "Understand L1/L2 Regularization math & Loss functions." },
-    session3: { title: "GO Topic Test: ML 1", desc: "Supervised Learning focused test." },
-    resource: { name: "IITM MLP Repo", link: "https://github.com/varunram2001/CS2008-MLP" }
+    session3: { title: "GO Topic Test: ML 1", desc: "Take ML Supervised Topic Test." },
+    resource: { name: "GO Test Series", link: "https://www.goclasses.in/s/pages/gate-da-test-series#1699851492489d" }
   },
   { 
     date: "Jan 08", day: "Wed", phase: "Topic Mastery", topic: "ML (Unsup) & Calc", 
@@ -121,7 +121,7 @@ export const MASTER_SCHEDULE: DaySchedule[] = [
     session1: { title: "GATE CS PYQs (DS)", desc: "Sorting, Hashing, Trees. Speed drill." },
     session2: { title: "Travel Prep", desc: "Download General Aptitude PYQs PDF." },
     session3: { title: "Travel & Aptitude", desc: "Solve 10 Aptitude Qs during travel." },
-    resource: { name: "Aptitude PYQs", link: "#" }
+    resource: { name: "Aptitude PYQs", link: "https://gateoverflow.in/tag/general-aptitude" }
   },
   // Phase 2: Maintenance
   { 
@@ -129,21 +129,21 @@ export const MASTER_SCHEDULE: DaySchedule[] = [
     session1: { title: "Spatial Aptitude", desc: "Solve folding/cutting/rotation questions." },
     session2: { title: "Hackathon/Event", desc: "Focus on event. Keep brain active." },
     session3: { title: "Rest", desc: "Light revision if time permits." },
-    resource: { name: "-", link: "#" }, isRest: true
+    resource: { name: "N/A", link: "#" }, isRest: true
   },
   { 
     date: "Jan 11", day: "Sat", phase: "Maintenance", topic: "General Aptitude", 
     session1: { title: "Logic & Quant", desc: "Solve 1 hour of GA questions." },
     session2: { title: "Hackathon/Event", desc: "Focus on event." },
     session3: { title: "Rest", desc: "-" },
-    resource: { name: "-", link: "#" }, isRest: true
+    resource: { name: "N/A", link: "#" }, isRest: true
   },
   { 
     date: "Jan 12", day: "Sun", phase: "Maintenance", topic: "Rest Day", 
     session1: { title: "Review Notes", desc: "Light review of ML Formula sheet." },
     session2: { title: "Relax", desc: "S2T Holiday." },
     session3: { title: "Rest", desc: "-" },
-    resource: { name: "-", link: "#" }, isRest: true
+    resource: { name: "N/A", link: "#" }, isRest: true
   },
   { 
     date: "Jan 13", day: "Mon", phase: "Maintenance", topic: "Reset & Travel", 
@@ -158,14 +158,14 @@ export const MASTER_SCHEDULE: DaySchedule[] = [
     session1: { title: "FULL LENGTH MOCK 1", desc: "GO Classes Mock. Strict 9am-12pm timing." },
     session2: { title: "Deep Analysis", desc: "Categorize mistakes: Concept vs Silly. Log them." },
     session3: { title: "Weakness Drill", desc: "Pick worst subject from Mock. Study from scratch." },
-    resource: { name: "GO Classes", link: "https://www.goclasses.in/" }
+    resource: { name: "GO Test Series", link: "https://www.goclasses.in/s/pages/gate-da-test-series#1699851492489d" }
   },
   { 
     date: "Jan 15", day: "Wed", phase: "War Mode", topic: "DBMS & Warehouse", 
     session1: { title: "GATE CS PYQs (SQL)", desc: "Solve SQL & Normalization questions." },
     session2: { title: "Warehousing Concepts", desc: "Star/Snowflake schemas, OLAP operations." },
-    session3: { title: "GO Topic Test: DBMS", desc: "Take the topic specific test." },
-    resource: { name: "SQLZoo", link: "https://sqlzoo.net/" }
+    session3: { title: "GO Topic Test: DBMS", desc: "Take DBMS Topic Test." },
+    resource: { name: "GO Test Series", link: "https://www.goclasses.in/s/pages/gate-da-test-series#1699851492489d" }
   },
   { 
     date: "Jan 16", day: "Thu", phase: "War Mode", topic: "AI (Logic/Search)", 
@@ -178,17 +178,17 @@ export const MASTER_SCHEDULE: DaySchedule[] = [
     date: "Jan 17", day: "Fri", phase: "War Mode", topic: "AI (Uncertainty)", 
     session1: { title: "Probabilistic Models", desc: "Bayes Nets, d-separation, Markov Models." },
     session2: { title: "Inference Math", desc: "Variable Elimination & Exact Inference." },
-    session3: { title: "GO Topic Test: AI", desc: "Take the AI topic test." },
-    resource: { name: "NPTEL AI", link: "https://nptel.ac.in/" }
+    session3: { title: "GO Topic Test: AI", desc: "Take AI Topic Test." },
+    resource: { name: "GO Test Series", link: "https://www.goclasses.in/s/pages/gate-da-test-series#1699851492489d" }
   },
   { 
     date: "Jan 18", day: "Sat", phase: "War Mode", topic: "MOCK TEST 2", 
     session1: { title: "FULL LENGTH MOCK 2", desc: "Strict timing. No distractions." },
     session2: { title: "6-Hour Analysis", desc: "Fix the top 3 weak topics found in mock." },
     session3: { title: "Repair", desc: "Continued analysis & drill." },
-    resource: { name: "GO Classes", link: "https://www.goclasses.in/" }
+    resource: { name: "GO Test Series", link: "https://www.goclasses.in/s/pages/gate-da-test-series#1699851492489d" }
   },
-  // Loop examples for context
+  // Loop examples for context (Jan 19 onwards)
   { 
     date: "Jan 19", day: "Sun", phase: "War Mode", topic: "Deep Dive (Calc+Py)", 
     session1: { title: "Advanced Calculus", desc: "Solve tough vector calculus problems." },
@@ -201,7 +201,7 @@ export const MASTER_SCHEDULE: DaySchedule[] = [
     session1: { title: "FULL LENGTH MOCK 3", desc: "Strict timing." },
     session2: { title: "Analysis", desc: "Identify & Log mistakes." },
     session3: { title: "Weakness Drill", desc: "Fix specific weak area." },
-    resource: { name: "GO Classes", link: "https://www.goclasses.in/" }
+    resource: { name: "GO Test Series", link: "https://www.goclasses.in/s/pages/gate-da-test-series#1699851492489d" }
   }
 ];
 
