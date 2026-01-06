@@ -14,17 +14,15 @@ export const sendMessageToGemini = async (
       return "Error: API_KEY not found in environment variables.";
     }
 
-    const model = "gemini-3-flash-preview";
+    // Upgraded to Gemini 3 Pro for deeper reasoning and better planning
+    const model = "gemini-3-pro-preview";
     
     // Transform history for the chat session
-    // Note: The new SDK manages history via the chat object, but we can also just pass the context
-    // For simplicity in this stateless service, we'll use generateContent with a constructed prompt or chat
-    // But to be proper with the SDK guidelines, let's use the chat feature.
-    
     const chat = ai.chats.create({
       model: model,
       config: {
         systemInstruction: SYSTEM_INSTRUCTION,
+        tools: [{ googleSearch: {} }],
       },
       history: history.map(h => ({
         role: h.role,
@@ -33,7 +31,30 @@ export const sendMessageToGemini = async (
     });
 
     const result = await chat.sendMessage({ message });
-    return result.text || "No response generated.";
+    let text = result.text || "No response generated.";
+
+    // Extract and append grounding metadata (citations) if available
+    const groundingChunks = result.candidates?.[0]?.groundingMetadata?.groundingChunks;
+    if (groundingChunks) {
+      const uniqueSources = new Map<string, string>();
+      
+      // Collect unique web sources
+      groundingChunks.forEach((chunk: any) => {
+        if (chunk.web?.uri && chunk.web?.title) {
+          uniqueSources.set(chunk.web.uri, chunk.web.title);
+        }
+      });
+
+      // Append sources to the response text in Markdown format
+      if (uniqueSources.size > 0) {
+        text += "\n\n---\n**Sources:**\n";
+        uniqueSources.forEach((title, uri) => {
+          text += `- [${title}](${uri})\n`;
+        });
+      }
+    }
+
+    return text;
 
   } catch (error) {
     console.error("Gemini API Error:", error);
